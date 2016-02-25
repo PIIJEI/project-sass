@@ -1,0 +1,10 @@
+{
+  "name": "SASS_Project",
+  "version": "0.0.1",
+  "description": "SASS Project",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Piotr Osiak"
+}
