@@ -1,6 +1,28 @@
-var gulp = require('gulp');
-	gutil = require('gulp-util');
+var gulp = require('gulp'),
+	gutil = require('gulp-util'),
+	browserify = require('gulp-browserify'),
+	compass = require('gulp-compass'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	connect = require('gulp-connect');
 
-gulp.task('log', function() {
-	gutil.log('SASS Test');
+var jsSources = ['components/scripts/script.js'];
+var sassSources = ['components/sass/style.scss'];
+
+gulp.task('js', function() {
+	gulp.src(jsSources)
+	.pipe(concat('script.js'))
+	.pipe(browserify())
+	.pipe(gulp.dest('builds/development/js'))
+});
+
+gulp.task('compass', function() {
+	gulp.src(sassSources)
+	.pipe(compass({
+		sass: 'components/sass',
+		image: 'builds/development/images',
+		style: 'expanded'
+	}))
+	.on('error', gutil.log)
+	.pipe(gulp.dest('builds/development/css'))
 });
