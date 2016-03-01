@@ -9,10 +9,19 @@
 $whiteSmoke 	: 	#ECECEC;
 $porcelain		:	#ECF0F1;
 $dark 			: 	#1C1C1C;
+$lightDark		:	#6C6C6C;
 $creamCan		: 	#F5D76E;
-$wisteriaPurple : 	#9B59B6;
-$studioPurple	:	#8E44AD;
+$wisteria 		: 	#9B59B6; // PURPLE LIGHT 
+$studio			:	#8E44AD; // PURPLE DARK
+$navBG			:	#AC9ADD;
+$mobileNav		:	#A18BDA;
 $silver			:	#BDC3C7;
+
+// MAIN COLOUR STYLES
+$mainColor		:	$dark;
+$headColor		:	$lightDark;
+$navFont		:	$whiteSmoke;
+$bgColor  		:	$porcelain;
 
 // Font variables
 
