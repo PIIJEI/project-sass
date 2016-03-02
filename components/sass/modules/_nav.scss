@@ -1,27 +1,58 @@
-nav {
-	width: 100%;
+#menu {
 	margin: 0;
 	padding: 0;
+	background: $navBG;
 	ul {
-		position: relative;
-		background: $navBG;
-		display: inline-block;
-		float: right;
+		width: 100%;
+		display: table;
+		.drop {
+			position: relative;
+		}
 		li {
-			display: inline-block;
 			float: left;
 			a {
-				padding: 15px;
+				padding: 25px;
 				text-decoration: none;
 				color: $dark;
 				font-family: $mainFont;
 				font-weight: $bold;
 				font-size: 1em;
-				float: left;	
+				float: left;
+				@include transition(all .3s ease-in-out);
 				&:hover {
 					background: $wisteria;
+					color: $whiteSmoke;
 				} // &:hover
 			} //a
+			
 		} //li
+		.drop-full {
+			position: absolute;
+			top: 100%;
+			display: none;
+			
+		} //drop-full
+		.drop:hover {
+			.drop-full {	
+				display: table;
+				background: inherit;
+				li {
+					float: none;
+					display: inline;
+					a {
+						padding: 15px;
+						background: $porcelain;
+						color: $dark;
+						width: 100%;
+						text-align: left;
+						font-size: .9em;
+						&:hover {
+							background: $studio;
+							color: $porcelain;
+						}
+					}
+				} //li.2
+			} //.drop-full
+		}//.drop:hover
 	} //ul
 } //nav

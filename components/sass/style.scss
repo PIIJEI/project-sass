@@ -14,11 +14,13 @@
 @import "variables";
 @import "mixins";
 @import "base";
-// @import "layout";
+@import "layout";
+@import "normalize";
 
 // //Import Modules
 @import "modules/intro";
 @import "modules/nav";
+@import "modules/backgrounds";
 @import "modules/welcome";
 @import "modules/pageinfo";
 @import "modules/footer";

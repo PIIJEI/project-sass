@@ -1,0 +1,31 @@
+header {
+	margin: 0;
+	display: inline-table;
+	width: 100%;
+
+	.hgroup {
+		@include backImage('../images/header-bg.jpg', 300px);
+		display: table-cell;
+		vertical-align: middle;
+
+		h1 {
+			color: $creamCan;
+			font-family: $imgFont;
+			font-size: 3.5em;
+			line-height: 105%;
+			margin-bottom: 0;
+			padding: 0 10%;
+			span {
+				font-family: $logoFont;
+			} //span
+		} //h1
+
+		p {
+			color: $creamCan;
+			font-family: $imgFont;
+			font-size: 1.75em;
+			padding: 0 10%;
+			margin-top: 0;
+		} //p
+	} //hgroup
+} //header

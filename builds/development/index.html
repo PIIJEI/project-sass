@@ -1,5 +1,5 @@
 <!-- **
-** The page includes self written 6 column grid system with a help of GRIDSETApp.com **
+** The page includes self written 6 column grid system supported by GRIDSETApp.com **
 ** -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,51 +18,51 @@
 	<a href="#menu">Skip to Nav</a>
 	<a href="#container">Skip to Content</a>
 </div>
-	<header role="banner" class="full--ht--img"> <!-- Banner of the page / .full ht img = full height image -->
-		<nav role="navigation"> <!-- Page navigation -->
-			<ul>
-				<li><a href="#" id="current">Intro</a>
-				</li>
-				<li><a href="#">Framework</a> <!-- Dropdown nav link -->
-					<!-- <ul>
-						<li><a href="#">The Grid</a></li>	
-						<li><a href="#">UI Kit</a></li>	
-						<li><a href="#">Grid in Use</a></li>	
-					</ul> -->
-				</li>
-				<li><a href="#">Documentations</a></li>
-				<li><a href="#">Contact</a></li>
+<nav role="navigation" id="menu"> <!-- Page navigation -->
+	<ul>
+		<li><a href="#" id="current">Intro</a>
+		</li>
+		<li class="drop"><a href="#">Framework</a> <!-- Dropdown nav link -->
+			<ul class="drop-full">
+				<li><a href="#">The Grid</a></li>	
+				<li><a href="#">UI Kit</a></li>	
+				<li><a href="#">Grid in Use</a></li>	
 			</ul>
-		</nav>
-		<div class="hgroup">
-			<h1><span>beta. </span>SASS Framework</h1>
-			<h2>Self-Initiated Project</h2>
-		</div>
-	</header>
+		</li>
+		<li><a href="#">Documentations</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+<header role="banner"> <!-- Banner of the page -->
+	<div class="hgroup">
+		<h1><span>beta. </span>SASS Framework</h1>
+		<p>Self-Initiated Project</p>
+	</div>
+</header>
 
-	<main role="main"> <!-- Main body of the page -->
-		<div class="container"> <!-- START Container -->
-			<h1>Intro</h1>
-			<div class="xlr2-xlr5 lr2-lr5 md2-md5 s-all"> <!-- START Grid -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<main role="main"> <!-- Main body of the page -->
+	<div id="container"> <!-- START Container -->
+		<h1>Intro</h1>
+		<div class="xlr2-xlr5 lr2-lr5 md2-md5 s-all"> <!-- START Grid -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div> <!-- END Grid -->
-		</div> <!-- END Container -->
-	</main>
+		</div> <!-- END Grid -->
+	</div> <!-- END Container -->
+</main>
 
-	<footer role="contentinfo"> <!-- Footer of the page --> 
-		<div class="brandft"> <!-- Brand and author logos -->
-			<a href="#"><span class="betalogo"></span></a> <!-- Framework Logo link -->
-			<a href="#"><span class="pjdlogo"></span></a> <!-- Author Logo Link -->
-		</div>
-		<div class="ftcontent">
-			<span class="betaft">beta.</span><br>
-			<span>Piotr Osiak <a href="http://www.piijeidesigns.co.uk/">(PIIJEI Designs)</a> &copy; 2016</span>
-		</div>
-	</footer>
+<footer role="contentinfo"> <!-- Footer of the page --> 
+	<div class="brandft"> <!-- Brand and author logos -->
+		<a href="#"><span class="betalogo"></span></a> <!-- Framework Logo link -->
+		<a href="#"><span class="pjdlogo"></span></a> <!-- Author Logo Link -->
+	</div>
+	<div class="ftcontent">
+		<span class="betaft">beta.</span><br>
+		<span>Piotr Osiak <a href="http://www.piijeidesigns.co.uk/">(PIIJEI Designs)</a> &copy; 2016</span>
+	</div>
+</footer>
 </body>
 </html>
