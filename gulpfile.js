@@ -16,16 +16,25 @@ var env,
 	outputDir,
 	sassStyle;
 
-env = process.env.NODE_ENV || 'development';
+// env = process.env.NODE_ENV || 'development';
+
+// if (env==='development') {
+// 	outputDir = 'builds/development/';
+// 	sassStyle = 'expanded';
+// } else {
+// 	outputDir = 'builds/production/';
+// 	sassStyle = "compressed";
+// }
+
+env = 'development';
 
 if (env==='development') {
-	outputDir = 'builds/development/';
-	sassStyle = 'expanded';
+  outputDir = 'builds/development/';
+  sassStyle = 'expanded';
 } else {
-	outputDir = 'builds/production/';
-	sassStyle = "compressed";
-}
-
+  outputDir = 'builds/production/';
+  sassStyle = 'compressed';
+} 
 
 jsSources = ['components/scripts/script.js'];
 sassSources = ['components/sass/style.scss'];
@@ -44,17 +53,19 @@ gulp.task('compass', function() {
 	gulp.src(sassSources)
 	.pipe(compass({
 		sass: 'components/sass',
+		css: outputDir + 'css',
 		image: outputDir + 'images',
 		style: sassStyle
 	}))
 	.on('error', gutil.log)
-	.pipe(gulp.dest(outputDir + 'css'))
+	// .pipe(gulp.dest(outputDir + 'css'))
 	.pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js']);
-	gulp.watch(outputDir + '*.scss', ['compass']);
+	// gulp.watch('*.scss', ['compass']);
+	gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
 	gulp.watch('builds/development/*.html', ['html']);
 });
 
@@ -72,4 +83,4 @@ gulp.task('html', function() {
 	.pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'js', 'compass', 'connect', 'watch']);
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'connect']);
