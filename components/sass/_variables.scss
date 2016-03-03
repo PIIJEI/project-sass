@@ -11,11 +11,16 @@ $porcelain		:	#ECF0F1;
 $dark 			: 	#1C1C1C;
 $lightDark		:	#6C6C6C;
 $creamCan		: 	#F5D76E;
+$blueish		:	#49515F;
 $wisteria 		: 	#9B59B6; // PURPLE LIGHT 
 $studio			:	#8E44AD; // PURPLE DARK
 $navBG			:	#AC9ADD;
 $mobileNav		:	#A18BDA;
 $silver			:	#BDC3C7;
+$steelBlue		:	#4B77BE;
+
+// DARKEN STYLES
+$darkenSteel	:	darken($steelBlue, 10%);
 
 // MAIN COLOUR STYLES
 $mainColor		:	$dark;

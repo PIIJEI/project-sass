@@ -1,31 +1,50 @@
 header {
 	margin: 0;
-	display: inline-table;
+	display: table;
 	width: 100%;
+	border-bottom: 5px solid $darkenSteel;
+	height: 250px;
+	background: $steelBlue;
+	//@include backImage('../images/head-01.svg', 43vh, cover);
 
 	.hgroup {
-		@include backImage('../images/header-bg.jpg', 300px);
+		margin: 0;
 		display: table-cell;
 		vertical-align: middle;
-
-		h1 {
-			color: $creamCan;
-			font-family: $imgFont;
-			font-size: 3.5em;
+		text-align: center;
+		padding-bottom: 20px;
+		h1, h2 {
 			line-height: 105%;
 			margin-bottom: 0;
-			padding: 0 10%;
-			span {
-				font-family: $logoFont;
-			} //span
+			padding: 0;
+		}
+		h1 {
+			font-size: 5em;
+			color: $porcelain;
+			font-family: $logoFont;
+
 		} //h1
+		h2 {
+			color: $creamCan;
+			font-family: $imgFont;
+			font-size: 3em;
+		} //h2
 
 		p {
 			color: $creamCan;
 			font-family: $imgFont;
-			font-size: 1.75em;
+			font-size: 1.5em;
 			padding: 0 10%;
 			margin-top: 0;
+			a {
+				color: $creamCan;
+				text-decoration: none;
+				border-bottom: 2px solid $creamCan;
+				@include transition(all .3s ease-in-out);
+				&:hover {
+					border-bottom-color: $silver;
+				} //hover
+			} //a
 		} //p
 	} //hgroup
 } //header

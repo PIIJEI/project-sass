@@ -1,27 +1,39 @@
 #menu {
 	margin: 0;
 	padding: 0;
-	background: $navBG;
+	position: absolute;
+	//background: $navBG;
 	ul {
 		width: 100%;
 		display: table;
+		padding: 10px;
 		.drop {
 			position: relative;
+			&:after {
+				content: '\02C5';
+				display: block;
+				color: $whiteSmoke;
+				font-size: .9em;
+				position: absolute;
+				top: 21px;
+				left: 92%;
+			}
 		}
 		li {
 			float: left;
 			a {
-				padding: 25px;
+				padding: 15px;
 				text-decoration: none;
-				color: $dark;
+				color: $whiteSmoke;
 				font-family: $mainFont;
 				font-weight: $bold;
 				font-size: 1em;
 				float: left;
+				border-top: 3px solid $whiteSmoke;
 				@include transition(all .3s ease-in-out);
 				&:hover {
-					background: $wisteria;
-					color: $whiteSmoke;
+					//background: $wisteria;
+					border-top-color: $wisteria;
 				} // &:hover
 			} //a
 			
@@ -30,6 +42,7 @@
 			position: absolute;
 			top: 100%;
 			display: none;
+			padding: 0;
 			
 		} //drop-full
 		.drop:hover {
@@ -49,10 +62,11 @@
 						&:hover {
 							background: $studio;
 							color: $porcelain;
-						}
-					}
+						} //&:hover
+					} //a.2
 				} //li.2
 			} //.drop-full
 		}//.drop:hover
 	} //ul
-} //nav
+} //#menu
+
