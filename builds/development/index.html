@@ -23,7 +23,14 @@
 		<li><a href="#" id="current">Intro</a>
 		</li>
 		<li class="drop"><a href="#">Framework</a> <!-- Dropdown nav link -->
-			<ul class="drop-full">
+			<ul class="drop-full"> 
+			<!-- Dropdown for Desktop and devices with the screen size bigger than 480px -->
+				<li><a href="#">The Grid</a></li>	
+				<li><a href="#">UI Kit</a></li>	
+				<li><a href="#">Grid in Use</a></li>	
+			</ul>
+			<ul class="drop-full-mobile">
+			<!-- Dropdown for Mobile devices with the screen size smaller than 480px -->
 				<li><a href="#">The Grid</a></li>	
 				<li><a href="#">UI Kit</a></li>	
 				<li><a href="#">Grid in Use</a></li>	
@@ -39,28 +46,47 @@
 		<p>Self-Initiated Project by <a href="http://www.piijeidesigns.co.uk/">Piotr Osiak</a></p>
 	</div>
 </header>
+
 <main role="main"> <!-- Main body of the page -->
 	<div id="container"> <!-- START Container -->
-		<h1>Intro</h1>
-		<div class="xlr2-xlr5 lr2-lr5 md2-md5 s-all"> <!-- START Grid -->
+	<div class="grid">
+	<h1>Introduction
+	<br>
+	<span>The purpose of this project</span>
+	</h1>
+	
+		<section class="sml med-2-3 lr-2-3"> <!-- START Grid -->
+			<div class="item">
+				<img src="http://www.placehold.it/150x150" alt="thumb image">
+			</div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div> <!-- END Grid -->
+		</section> <!-- END Grid -->
+		<section class="sml med-4-5 lr-4-5"> <!-- START Grid -->
+			<div class="item">
+				<img src="http://www.placehold.it/150x150" alt="thumb image">
+			</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section> <!-- END Grid -->
+		</div> <!-- .Grid -->
 	</div> <!-- END Container -->
 </main>
 
-<footer role="contentinfo"> <!-- Footer of the page --> 
-	<div class="brandft"> <!-- Brand and author logos -->
-		<a href="#"><span class="betalogo"></span></a> <!-- Framework Logo link -->
-		<a href="#"><span class="pjdlogo"></span></a> <!-- Author Logo Link -->
-	</div>
+<footer role="contentinfo">
 	<div class="ftcontent">
-		<span class="betaft">beta.</span><br>
-		<span>Piotr Osiak <a href="http://www.piijeidesigns.co.uk/">(PIIJEI Designs)</a> &copy; 2016</span>
+		<p>beta. &copy; 2016
+		<br>
+		Designed &amp; Developed by <a href="http://www.piijeidesigns.co.uk/">Piotr Osiak</a>
+		</p>
 	</div>
 </footer>
 </body>

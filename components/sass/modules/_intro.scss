@@ -1,0 +1,135 @@
+main {
+	padding: 0;
+	margin: 0;
+	#container {
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+		.grid {
+			h1 {
+				display: block;
+				font-size: 3.5em;
+				@include gs-span(lr, 2, 5);
+					span {
+					display: block;
+					font-size: .4em;
+					line-height: .8em;
+					padding-bottom: 15px;
+					@include gs-span(lr, 2, 6);
+					text-transform: uppercase;
+					clear: left;
+				}
+			} //h1
+			
+			@include gs-media(lr, min) {
+				.lr-2-3 {
+					width: 39.5547%;
+					margin-left: 6.957%;
+					float: left;
+					margin-right: -100%;
+					padding-left: 1%;
+					padding-right: 1%;
+					@include gs-pad(lr, padinfull);
+					clear: left;
+				} //lr2-lr3
+				.lr-4-5 {
+					width: 43.6758%;
+					margin-left: 47.5117%;
+					float: left;
+					margin-right: -100%;
+					padding-left: 1%;
+					padding-right: 1%;
+					@include gs-pad(lr, padinfull);
+					clear: right;
+				} //lr4-lr5
+			} //gs-media large
+			@include breakpoint(sml) {
+				.sml {
+					padding-left: 1%;
+					padding-right: 1%;
+					@include gs-pad(s, padinfull);
+					margin: 0;
+					width: 100%;
+		  			float: left;
+		  			clear: left;
+				} //sml
+			} //.s-all
+
+
+
+
+			// @include gs-media(s, max) {
+				
+				/* Breakpoint Here */
+
+			// } //gs-media small
+		} //grid
+
+		.item {
+			margin: 0;
+			padding-bottom: 25px;
+			@include clearfix;
+			img {
+				border-radius: 100%;
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+				max-width: 150px;
+			}
+		}
+
+		p {
+			letter-spacing: 0.05em;
+			line-height: 1.2em;
+		}
+	} //container
+} //main
+
+
+				// @include gs-media(md, min) {
+				// 	.med-2-3 {
+				// 		width: 39.5156%;
+				// 		margin-left: 8.5521%;
+				// 		float: left;
+				// 		margin-right: -100%;
+				// 		padding-left: 0.5%;
+				// 		padding-right: 0.5%;
+				// 		@include gs-pad(md, padinfull);
+				// 	} //md2-md3
+				// 	.med-4-5 {
+				// 		width: 39.6458%;
+				// 		margin-left: 49.0677%;
+				// 		float: left;
+				// 		margin-right: -100%;
+				// 		padding-left: 1%;
+				// 		padding-right: 1%;
+				// 		@include gs-pad(md, padinfull);
+				// 	} //md4-md5
+				// } //gs-media medium
+
+				// .grid { 						//USEFUL SECTION FOR IMAGE GRID
+				// 	@include clearfix;
+				// 	.item {
+				//  float: left;
+				//  @include imagegrid(5, 1%);
+				//  }	
+				//  img {
+				//  display: block;
+				//  border-radius: 100%;
+				//  width: 100%;
+				//  max-width: 300px;
+				//  }
+				//  }
+
+				// .lr2-lr5 {
+				// 	width: 84.2305%;
+				// 	margin-left: 6.957%;
+				// 	float: left;
+				// 	margin-right: -100%;
+				// 	padding-top: 2%;
+				// 	padding-left: 1%;
+				// 	padding-right: 1%;
+				// 	@include gs-pad(lr, padinfull);
+				// 	@include gs-span(lr, 3, 5);
+				// 	clear: left;
+				// } //.lr2-lr5

@@ -1,12 +1,119 @@
 #menu {
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	//background: $navBG;
-	ul {
+	background: lighten($wisteria, 15%);
+	width: 100%;
+		ul {
+			list-style-type: none;
+			float: none;
+			.drop {
+			position: relative;
+				&:after {
+					content: '\02C5';
+					display: block;
+					color: $whiteSmoke;
+					font-size: .9em;
+					position: absolute;
+					top: 25px;
+					left: 83.75%;
+				} //&:after
+			} //.drop li
+			li {
+				display: inline-block;
+			.drop-full-mobile {
+				display: none;
+			}
+				a {
+					color: $porcelain;
+					display: inline-block;
+					padding: 20px 25px;
+					text-align: center;
+					text-decoration: none;
+					font-family: $mainFont;
+					font-weight: $bold;
+					font-size: 1em;
+					border-top: 2px solid $whiteSmoke;
+					@include transition(all .3s ease-in-out);
+					&:hover {
+						background: lighten($wisteria, 20%);
+						border-top: 2px solid $wisteria;
+					} //&.hover
+				} //a
+			} //li
+			.drop-full {
+			position: absolute;
+			top: 100%;
+			display: none;
+			padding: 0;	
+		} //drop-full
+		.drop:hover {
+			.drop-full {
+				overflow: hidden;	
+				display: block;
+				background: inherit;
+				li {
+					float: none;
+					display: inline;
+					a {
+						padding: 15px;
+						background: $porcelain;
+						color: $dark;
+						width: 100%;
+						text-align: left;
+						font-size: .9em;
+						border-top: none;
+						&:hover {
+							background: $studio;
+							color: $porcelain;
+							border-top: none;
+						} //&:hover
+					} //a.2
+				} //li.2
+			} //.drop-full
+		}//.drop:hover
+		} //ul 
+
+	@include breakpoint(sml) {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 0;
+		ul {
+			margin: 0;
+			padding: 0;
+			.drop {
+			position: relative;
+				&:after {
+					content: '\02C5';
+					display: none;
+				} //&:after
+			} //.drop li
+			li {
+				display: block;
+			.drop-full-mobile {
+				position: relative;
+				display: block;
+				font-size: .8em;
+				background: lighten($wisteria, 5%);
+			 } //drop-full
+				a {
+					display: block;
+				} //a
+			} //li
+			 .drop:hover {
+			 	.drop-full {
+			 		display: none;
+			 	}
+			 }
+		} //ul
+	}//breakpoint small
+} //#menu
+
+
+
+
+	/* ul {
 		width: 100%;
-		display: table;
 		padding: 10px;
+		// float: right;
+		// @include clearfix;
 		.drop {
 			position: relative;
 			&:after {
@@ -20,7 +127,7 @@
 			}
 		}
 		li {
-			float: left;
+			// float: left;
 			a {
 				padding: 15px;
 				text-decoration: none;
@@ -32,22 +139,19 @@
 				border-top: 3px solid $whiteSmoke;
 				@include transition(all .3s ease-in-out);
 				&:hover {
-					//background: $wisteria;
 					border-top-color: $wisteria;
 				} // &:hover
 			} //a
-			
 		} //li
 		.drop-full {
 			position: absolute;
 			top: 100%;
 			display: none;
-			padding: 0;
-			
+			padding: 0;	
 		} //drop-full
 		.drop:hover {
 			.drop-full {	
-				display: table;
+				display: block;
 				background: inherit;
 				li {
 					float: none;
@@ -67,6 +171,4 @@
 				} //li.2
 			} //.drop-full
 		}//.drop:hover
-	} //ul
-} //#menu
-
+	} //ul */

@@ -17,6 +17,12 @@
 	} //after
 } //clearfix
 
+@mixin borderbox {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 @mixin gradBG($bgone, $bgtwo, $heightGrad) {
 	background: linear-gradient(to bottom left, rgba($bgone,1), rgba($bgtwo,1));
 	background-repeat: no-repeat;
@@ -24,3 +30,51 @@
 	background-size: cover;
 	height: $heightGrad;
 }
+
+@mixin imagegrid($qty, $margin) {
+	width: ((100% - (($qty - 1) * $margin))/$qty);
+	&:nth-child(n) {
+		margin-right: $margin;
+		margin-bottom: $margin;
+	}
+	&:nth-child(#{$qty}n) {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}
+
+// @mixin breakpoint($length) {
+// 	@media (min-width: $length) {
+// 		@content;
+// 	}
+// }
+
+@mixin breakpoint($length) {
+	@if $length == sml {
+		@media (max-width: $small) {
+			@content; 
+		} //@media max-width: $small = 480px
+	} //if "sml"
+
+	@else if $length == med {
+		@media (max-width: $medium) {
+			@content;
+		} //media max-width $medium = 768px
+	} //else if "med"
+
+	@else if $length == lrg {
+		@media (min-width: $large) {
+			@content;
+		} //media min-width $large = 992px
+	} //else if "lrg"
+
+	@else if $length == wide {
+		@media (min-width: $wide) {
+			@content;
+		} //media min-width $wide = 1200px
+	} //else if "wide"
+
+	@else {
+		@warn "Breakpoint mixin supports: sml, med, lrg, wide";
+	} //else warn
+} //breakpoint mixin

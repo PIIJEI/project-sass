@@ -4,6 +4,7 @@
 //Compass imports
 @import "compass";
 @import "compass/reset";
+@import "compass/layout";
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 @import 'compass/css3/filter';
@@ -16,11 +17,12 @@
 @import "base";
 @import "layout";
 @import "normalize";
+@import "gridset";
+
 
 // //Import Modules
 @import "modules/intro";
 @import "modules/nav";
 @import "modules/backgrounds";
-@import "modules/welcome";
 @import "modules/pageinfo";
 @import "modules/footer";

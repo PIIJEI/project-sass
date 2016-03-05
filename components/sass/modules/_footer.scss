@@ -1,0 +1,30 @@
+footer {
+	width: 100%;
+	margin-top: 20px;
+	padding: 0;
+	// background: lighten($dark, 10%);
+
+	.ftcontent {
+		text-align: right;
+		margin-right: 5%;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		color: lighten($dark, 30%);
+		line-height: 1.2em;
+		p {
+			font-size: 0.8em;
+			letter-spacing: 0.05em;
+			a {
+				text-decoration: none;
+				color: lighten($dark, 30%);
+				@include transition(all .3s ease-in-out);
+				&:hover {
+					border-bottom: 1px solid darken($dark, 10%);;
+					color: darken($dark, 10%);
+				} //&:hover
+			} //a
+		} //p
+	} //ftcontent
+
+	
+} //footer

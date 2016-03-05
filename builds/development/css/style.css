@@ -477,15 +477,119 @@ th {
   padding: 0;
 }
 
-#menu {
+main {
+  padding: 0;
+  margin: 0;
+}
+main #container {
   margin: 0;
   padding: 0;
-  position: absolute;
+}
+main #container:before, main #container:after {
+  content: '';
+  display: table;
+}
+main #container:after {
+  clear: both;
+}
+main #container .grid {
+  /* Breakpoint Here */
+}
+main #container .grid h1 {
+  display: block;
+  font-size: 3.5em;
+  display: block;
+  float: left;
+  margin-left: 6.95703%;
+  margin-right: -100%;
+  width: 84.23047%;
+}
+main #container .grid h1 span {
+  display: block;
+  font-size: .4em;
+  line-height: .8em;
+  padding-bottom: 15px;
+  display: block;
+  float: left;
+  margin-left: 6.95703%;
+  margin-right: -100%;
+  width: 93.04297%;
+  text-transform: uppercase;
+  clear: left;
+}
+main #container .grid .lr-2-3 {
+  width: 39.5547%;
+  margin-left: 6.957%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+main #container .grid .lr-4-5 {
+  width: 43.6758%;
+  margin-left: 47.5117%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: right;
+}
+@media (max-width: 480px) {
+  main #container .grid .sml {
+    padding-left: 1%;
+    padding-right: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0;
+    width: 100%;
+    float: left;
+    clear: left;
+  }
+}
+main #container .item {
+  margin: 0;
+  padding-bottom: 25px;
+}
+main #container .item:before, main #container .item:after {
+  content: '';
+  display: table;
+}
+main #container .item:after {
+  clear: both;
+}
+main #container .item img {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 150px;
+}
+main #container p {
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+}
+
+#menu {
+  background: #bb8ecd;
+  width: 100%;
 }
 #menu ul {
-  width: 100%;
-  display: table;
-  padding: 10px;
+  list-style-type: none;
+  float: none;
 }
 #menu ul .drop {
   position: relative;
@@ -496,28 +600,33 @@ th {
   color: #ECECEC;
   font-size: .9em;
   position: absolute;
-  top: 21px;
-  left: 92%;
+  top: 25px;
+  left: 83.75%;
 }
 #menu ul li {
-  float: left;
+  display: inline-block;
+}
+#menu ul li .drop-full-mobile {
+  display: none;
 }
 #menu ul li a {
-  padding: 15px;
+  color: #ECF0F1;
+  display: inline-block;
+  padding: 20px 25px;
+  text-align: center;
   text-decoration: none;
-  color: #ECECEC;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 600;
   font-size: 1em;
-  float: left;
-  border-top: 3px solid #ECECEC;
+  border-top: 2px solid #ECECEC;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 #menu ul li a:hover {
-  border-top-color: #9B59B6;
+  background: #c6a0d5;
+  border-top: 2px solid #9B59B6;
 }
 #menu ul .drop-full {
   position: absolute;
@@ -526,7 +635,8 @@ th {
   padding: 0;
 }
 #menu ul .drop:hover .drop-full {
-  display: table;
+  overflow: hidden;
+  display: block;
   background: inherit;
 }
 #menu ul .drop:hover .drop-full li {
@@ -540,18 +650,116 @@ th {
   width: 100%;
   text-align: left;
   font-size: .9em;
+  border-top: none;
 }
 #menu ul .drop:hover .drop-full li a:hover {
   background: #8E44AD;
   color: #ECF0F1;
+  border-top: none;
+}
+@media (max-width: 480px) {
+  #menu {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  #menu ul {
+    margin: 0;
+    padding: 0;
+  }
+  #menu ul .drop {
+    position: relative;
+  }
+  #menu ul .drop:after {
+    content: '\02C5';
+    display: none;
+  }
+  #menu ul li {
+    display: block;
+  }
+  #menu ul li .drop-full-mobile {
+    position: relative;
+    display: block;
+    font-size: .8em;
+    background: #a66bbe;
+  }
+  #menu ul li a {
+    display: block;
+  }
+  #menu ul .drop:hover .drop-full {
+    display: none;
+  }
 }
 
+/* ul {
+	width: 100%;
+	padding: 10px;
+	// float: right;
+	// @include clearfix;
+	.drop {
+		position: relative;
+		&:after {
+			content: '\02C5';
+			display: block;
+			color: $whiteSmoke;
+			font-size: .9em;
+			position: absolute;
+			top: 21px;
+			left: 92%;
+		}
+	}
+	li {
+		// float: left;
+		a {
+			padding: 15px;
+			text-decoration: none;
+			color: $whiteSmoke;
+			font-family: $mainFont;
+			font-weight: $bold;
+			font-size: 1em;
+			float: left;
+			border-top: 3px solid $whiteSmoke;
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				border-top-color: $wisteria;
+			} // &:hover
+		} //a
+	} //li
+	.drop-full {
+		position: absolute;
+		top: 100%;
+		display: none;
+		padding: 0;	
+	} //drop-full
+	.drop:hover {
+		.drop-full {	
+			display: block;
+			background: inherit;
+			li {
+				float: none;
+				display: inline;
+				a {
+					padding: 15px;
+					background: $porcelain;
+					color: $dark;
+					width: 100%;
+					text-align: left;
+					font-size: .9em;
+					&:hover {
+						background: $studio;
+						color: $porcelain;
+					} //&:hover
+				} //a.2
+			} //li.2
+		} //.drop-full
+	}//.drop:hover
+} //ul */
 header {
   margin: 0;
   display: table;
   width: 100%;
   border-bottom: 5px solid #395f9d;
-  height: 250px;
+  height: 350px;
   background: #4B77BE;
 }
 header .hgroup {
@@ -594,4 +802,34 @@ header .hgroup p a {
 }
 header .hgroup p a:hover {
   border-bottom-color: #BDC3C7;
+}
+
+footer {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0;
+}
+footer .ftcontent {
+  text-align: right;
+  margin-right: 5%;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: dimgray;
+  line-height: 1.2em;
+}
+footer .ftcontent p {
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+footer .ftcontent p a {
+  text-decoration: none;
+  color: dimgray;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer .ftcontent p a:hover {
+  border-bottom: 1px solid #030303;
+  color: #030303;
 }
