@@ -6,20 +6,20 @@ main {
 		padding: 0;
 		@include clearfix;
 		.grid {
-			h1 {
+			.page-title {
 				display: block;
 				font-size: 3.5em;
 				@include gs-span(lr, 2, 5);
 					span {
 					display: block;
-					font-size: .4em;
-					line-height: .8em;
+					font-size: .3em;
+					line-height: 1em;
 					padding-bottom: 15px;
 					@include gs-span(lr, 2, 6);
 					text-transform: uppercase;
 					clear: left;
 				}
-			} //h1
+			} //page-title
 			
 			@include gs-media(lr, min) {
 				.lr-2-3 {
@@ -42,6 +42,38 @@ main {
 					@include gs-pad(lr, padinfull);
 					clear: right;
 				} //lr4-lr5
+
+				.sidebar {
+					margin: 0;
+					padding: 0;
+					.sidemenu {
+						border-bottom: 3px solid lighten($silver, 10%);
+						@include gs-span(lr, 2, 4);
+						clear: left;
+						margin-bottom: 2%;
+						li {
+							float: left;
+							display: inline;
+							border-right: 1px solid lighten($silver, 10%);
+							a {
+								display: block;
+								font-size: 1em;
+								text-decoration: none;
+								color: darken($silver, 50%);
+								text-align: center;
+								padding: 15px;
+								@include transition(all .3s ease-in-out);
+								&:hover {
+									background: lighten($silver, 10%);
+									color: darken($silver, 50%);
+								}
+								&.curr {
+									background: lighten($silver, 10%);
+								}
+							} //a
+						} //li
+					} //sidemenu
+				} //sidenav
 			} //gs-media large
 			@include breakpoint(sml) {
 				.sml {
@@ -54,17 +86,7 @@ main {
 		  			clear: left;
 				} //sml
 			} //.s-all
-
-
-
-
-			// @include gs-media(s, max) {
-				
-				/* Breakpoint Here */
-
-			// } //gs-media small
 		} //grid
-
 		.item {
 			margin: 0;
 			padding-bottom: 25px;
@@ -75,61 +97,11 @@ main {
 				margin: 0 auto;
 				width: 100%;
 				max-width: 150px;
-			}
-		}
-
+			}//img
+		}//item
 		p {
 			letter-spacing: 0.05em;
 			line-height: 1.2em;
 		}
 	} //container
 } //main
-
-
-				// @include gs-media(md, min) {
-				// 	.med-2-3 {
-				// 		width: 39.5156%;
-				// 		margin-left: 8.5521%;
-				// 		float: left;
-				// 		margin-right: -100%;
-				// 		padding-left: 0.5%;
-				// 		padding-right: 0.5%;
-				// 		@include gs-pad(md, padinfull);
-				// 	} //md2-md3
-				// 	.med-4-5 {
-				// 		width: 39.6458%;
-				// 		margin-left: 49.0677%;
-				// 		float: left;
-				// 		margin-right: -100%;
-				// 		padding-left: 1%;
-				// 		padding-right: 1%;
-				// 		@include gs-pad(md, padinfull);
-				// 	} //md4-md5
-				// } //gs-media medium
-
-				// .grid { 						//USEFUL SECTION FOR IMAGE GRID
-				// 	@include clearfix;
-				// 	.item {
-				//  float: left;
-				//  @include imagegrid(5, 1%);
-				//  }	
-				//  img {
-				//  display: block;
-				//  border-radius: 100%;
-				//  width: 100%;
-				//  max-width: 300px;
-				//  }
-				//  }
-
-				// .lr2-lr5 {
-				// 	width: 84.2305%;
-				// 	margin-left: 6.957%;
-				// 	float: left;
-				// 	margin-right: -100%;
-				// 	padding-top: 2%;
-				// 	padding-left: 1%;
-				// 	padding-right: 1%;
-				// 	@include gs-pad(lr, padinfull);
-				// 	@include gs-span(lr, 3, 5);
-				// 	clear: left;
-				// } //.lr2-lr5

@@ -32,7 +32,7 @@ $bgColor  		:	$porcelain;
 
 $logoFont		:	'Lobster', 'Helvetica Neue', Helvetica, sans-serif;
 $mainFont		:	'Source Sans Pro', 'Helvetica Neue', Helvetica, sans-serif;
-$imgFont		:	'Pathway Gothic One', 'Helvetica Neue', Helvetica, sans-serif;
+$titleFont		:	'Pathway Gothic One', 'Helvetica Neue', Helvetica, sans-serif;
 
 $thin 		: 300;
 $normal 	: 400;	
@@ -41,8 +41,9 @@ $heavy 		: 700;
 
 // Breakpoints
 
-$wide	:	1200px; //Desktop
-$large	:	992px; //Laptop/iMac/Macbook
-$medium	:	768px; //Ipads
-$small	:	480px; //Mobile
+$wide		:	1200px; //Desktop
+$large		:	992px; //Laptop/iMac/Macbook
+$mediumMax	:	991px; //Ipads Max Screens to Laptop Screens
+$medium		:	768px; //Ipads
+$small		:	480px; //Mobile
 

@@ -492,10 +492,7 @@ main #container:before, main #container:after {
 main #container:after {
   clear: both;
 }
-main #container .grid {
-  /* Breakpoint Here */
-}
-main #container .grid h1 {
+main #container .grid .page-title {
   display: block;
   font-size: 3.5em;
   display: block;
@@ -504,10 +501,10 @@ main #container .grid h1 {
   margin-right: -100%;
   width: 84.23047%;
 }
-main #container .grid h1 span {
+main #container .grid .page-title span {
   display: block;
-  font-size: .4em;
-  line-height: .8em;
+  font-size: .3em;
+  line-height: 1em;
   padding-bottom: 15px;
   display: block;
   float: left;
@@ -544,6 +541,44 @@ main #container .grid .lr-4-5 {
   padding-left: 1%;
   padding-right: 1%;
   clear: right;
+}
+main #container .grid .sidebar {
+  margin: 0;
+  padding: 0;
+}
+main #container .grid .sidebar .sidemenu {
+  border-bottom: 3px solid #d9dcde;
+  display: block;
+  float: left;
+  margin-left: 6.95703%;
+  margin-right: -100%;
+  width: 63.51367%;
+  clear: left;
+  margin-bottom: 2%;
+}
+main #container .grid .sidebar .sidemenu li {
+  float: left;
+  display: inline;
+  border-right: 1px solid #d9dcde;
+}
+main #container .grid .sidebar .sidemenu li a {
+  display: block;
+  font-size: 1em;
+  text-decoration: none;
+  color: #3d4448;
+  text-align: center;
+  padding: 15px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+main #container .grid .sidebar .sidemenu li a:hover {
+  background: #d9dcde;
+  color: #3d4448;
+}
+main #container .grid .sidebar .sidemenu li a.curr {
+  background: #d9dcde;
 }
 @media (max-width: 480px) {
   main #container .grid .sml {
@@ -591,23 +626,8 @@ main #container p {
   list-style-type: none;
   float: none;
 }
-#menu ul .drop {
-  position: relative;
-}
-#menu ul .drop:after {
-  content: '\02C5';
-  display: block;
-  color: #ECECEC;
-  font-size: .9em;
-  position: absolute;
-  top: 25px;
-  left: 83.75%;
-}
 #menu ul li {
   display: inline-block;
-}
-#menu ul li .drop-full-mobile {
-  display: none;
 }
 #menu ul li a {
   color: #ECF0F1;
@@ -628,35 +648,6 @@ main #container p {
   background: #c6a0d5;
   border-top: 2px solid #9B59B6;
 }
-#menu ul .drop-full {
-  position: absolute;
-  top: 100%;
-  display: none;
-  padding: 0;
-}
-#menu ul .drop:hover .drop-full {
-  overflow: hidden;
-  display: block;
-  background: inherit;
-}
-#menu ul .drop:hover .drop-full li {
-  float: none;
-  display: inline;
-}
-#menu ul .drop:hover .drop-full li a {
-  padding: 15px;
-  background: #ECF0F1;
-  color: #1C1C1C;
-  width: 100%;
-  text-align: left;
-  font-size: .9em;
-  border-top: none;
-}
-#menu ul .drop:hover .drop-full li a:hover {
-  background: #8E44AD;
-  color: #ECF0F1;
-  border-top: none;
-}
 @media (max-width: 480px) {
   #menu {
     position: relative;
@@ -667,93 +658,14 @@ main #container p {
     margin: 0;
     padding: 0;
   }
-  #menu ul .drop {
-    position: relative;
-  }
-  #menu ul .drop:after {
-    content: '\02C5';
-    display: none;
-  }
   #menu ul li {
     display: block;
-  }
-  #menu ul li .drop-full-mobile {
-    position: relative;
-    display: block;
-    font-size: .8em;
-    background: #a66bbe;
   }
   #menu ul li a {
     display: block;
   }
-  #menu ul .drop:hover .drop-full {
-    display: none;
-  }
 }
 
-/* ul {
-	width: 100%;
-	padding: 10px;
-	// float: right;
-	// @include clearfix;
-	.drop {
-		position: relative;
-		&:after {
-			content: '\02C5';
-			display: block;
-			color: $whiteSmoke;
-			font-size: .9em;
-			position: absolute;
-			top: 21px;
-			left: 92%;
-		}
-	}
-	li {
-		// float: left;
-		a {
-			padding: 15px;
-			text-decoration: none;
-			color: $whiteSmoke;
-			font-family: $mainFont;
-			font-weight: $bold;
-			font-size: 1em;
-			float: left;
-			border-top: 3px solid $whiteSmoke;
-			@include transition(all .3s ease-in-out);
-			&:hover {
-				border-top-color: $wisteria;
-			} // &:hover
-		} //a
-	} //li
-	.drop-full {
-		position: absolute;
-		top: 100%;
-		display: none;
-		padding: 0;	
-	} //drop-full
-	.drop:hover {
-		.drop-full {	
-			display: block;
-			background: inherit;
-			li {
-				float: none;
-				display: inline;
-				a {
-					padding: 15px;
-					background: $porcelain;
-					color: $dark;
-					width: 100%;
-					text-align: left;
-					font-size: .9em;
-					&:hover {
-						background: $studio;
-						color: $porcelain;
-					} //&:hover
-				} //a.2
-			} //li.2
-		} //.drop-full
-	}//.drop:hover
-} //ul */
 header {
   margin: 0;
   display: table;
@@ -804,6 +716,267 @@ header .hgroup p a:hover {
   border-bottom-color: #BDC3C7;
 }
 
+.grid-info {
+  margin: 0;
+  padding-bottom: 15px;
+}
+.grid-info:before, .grid-info:after {
+  content: '';
+  display: table;
+}
+.grid-info:after {
+  clear: both;
+}
+.grid-info .grid-6-title h2 {
+  font-size: 3.5em;
+  position: relative;
+  line-height: .6em;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  color: #6C6C6C;
+  border-bottom: 2px solid #d9dcde;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .grid-info .grid-6-title h2 {
+    font-size: 2.75em;
+  }
+}
+.grid-info .grid-6-title h2 span {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.grid-info .grid-pics img {
+  display: inline-block;
+  padding: 5px;
+}
+@media (max-width: 991px) {
+  .grid-info .grid-pics img {
+    max-width: 125px;
+  }
+}
+@media (max-width: 768px) {
+  .grid-info .grid-pics img {
+    max-width: 110px;
+    padding: 1px;
+  }
+}
+@media (max-width: 480px) {
+  .grid-info .grid-pics img {
+    max-width: 100px;
+  }
+}
+
+.ui-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.ui-section .ui-headings {
+  text-align: center;
+  display: block;
+  float: left;
+  margin-left: 50.75391%;
+  margin-right: -100%;
+  width: 49.24609%;
+}
+@media (max-width: 768px) {
+  .ui-section .ui-headings {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 100%;
+    text-align: left;
+  }
+}
+.ui-section .ui-headings h2 {
+  font-size: 4em;
+  position: relative;
+  padding: 5px;
+}
+.ui-section .ui-headings p {
+  text-align: left;
+  display: block;
+  float: left;
+  margin-left: 6.95703%;
+  margin-right: -100%;
+  width: 84.23047%;
+}
+@media (max-width: 768px) {
+  .ui-section .ui-headings p {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 99.92187%;
+  }
+}
+@media (max-width: 480px) {
+  .ui-section .ui-headings p {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 99.92187%;
+  }
+}
+.ui-section .typography-styles {
+  background: #e1e8f4;
+}
+.ui-section .typography-styles .typo-heading {
+  font-size: 2em;
+  line-height: 1em;
+  background: #7093cc;
+  color: #ECECEC;
+  padding: 15px;
+}
+.ui-section .typography-styles h1, .ui-section .typography-styles h2, .ui-section .typography-styles h3, .ui-section .typography-styles h4, .ui-section .typography-styles h5, .ui-section .typography-styles h6, .ui-section .typography-styles p, .ui-section .typography-styles blockquote {
+  margin: 0;
+  padding: 10px;
+  font-size: inherit;
+  line-height: 1.2em;
+}
+.ui-section .typography-styles h1 span, .ui-section .typography-styles h2 span, .ui-section .typography-styles h3 span, .ui-section .typography-styles h4 span, .ui-section .typography-styles h5 span, .ui-section .typography-styles h6 span, .ui-section .typography-styles p span, .ui-section .typography-styles blockquote span {
+  font-size: 14px;
+}
+.ui-section .typography-styles h1 {
+  font-size: 4em;
+}
+.ui-section .typography-styles h2 {
+  font-size: 3.75em;
+}
+.ui-section .typography-styles h3 {
+  font-size: 3.35em;
+}
+.ui-section .typography-styles h4 {
+  font-size: 3em;
+}
+.ui-section .typography-styles h5 {
+  font-size: 2.5em;
+}
+.ui-section .typography-styles h6 {
+  font-size: 2em;
+}
+.ui-section .typography-styles p {
+  font-size: 1.2em;
+}
+.ui-section .typography-styles blockquote {
+  font-size: 1em;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 15px;
+  border-left: 5px solid #c6a0d5;
+}
+.ui-section .item-ui-icons {
+  margin: 0;
+  padding-bottom: 25px;
+  display: block;
+  float: left;
+  margin-left: 0;
+  margin-right: -100%;
+  width: 91.1875%;
+}
+.ui-section .item-ui-icons:before, .ui-section .item-ui-icons:after {
+  content: '';
+  display: table;
+}
+.ui-section .item-ui-icons:after {
+  clear: both;
+}
+.ui-section .item-ui-icons .icon-stock {
+  border-bottom: 2px solid #d9dcde;
+  padding-bottom: 10px;
+}
+.ui-section .item-ui-icons .icon-stock img {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* LARGE */
+.lr-1-5 {
+  width: 91.1875%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
+.lr-2-5 {
+  width: 84.2305%;
+  margin-left: 6.957%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
+.lr-1-3 {
+  width: 49.7539%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: right;
+}
+
+.lr-3-5 {
+  width: 62.332%;
+  margin-left: 28.8555%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
+.lr-4-5 {
+  width: 40.4336%;
+  margin-left: 50.7539%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
+/* MEDIUM */
+@media (max-width: 768px) {
+  .md {
+    width: 100%;
+    float: left;
+    clear: left;
+  }
+}
+/* SMALL */
 footer {
   width: 100%;
   margin-top: 20px;

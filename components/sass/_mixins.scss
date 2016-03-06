@@ -43,12 +43,6 @@
 	}
 }
 
-// @mixin breakpoint($length) {
-// 	@media (min-width: $length) {
-// 		@content;
-// 	}
-// }
-
 @mixin breakpoint($length) {
 	@if $length == sml {
 		@media (max-width: $small) {
@@ -61,6 +55,12 @@
 			@content;
 		} //media max-width $medium = 768px
 	} //else if "med"
+
+	@else if $length == med_lrg {
+		@media (max-width: $mediumMax) {
+			@content;
+		} //media max-width $medium = 991px
+	} //else if "medMax"
 
 	@else if $length == lrg {
 		@media (min-width: $large) {
@@ -75,6 +75,6 @@
 	} //else if "wide"
 
 	@else {
-		@warn "Breakpoint mixin supports: sml, med, lrg, wide";
+		@warn "Breakpoint mixin supports: sml, med, med_lrg, lrg, wide";
 	} //else warn
 } //breakpoint mixin
