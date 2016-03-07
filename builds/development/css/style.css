@@ -82,6 +82,36 @@ p {
   display: none;
 }
 
+/* MORE TO COME SOON */
+.in-progress {
+  margin: 0;
+}
+.in-progress .more-to-come {
+  text-align: center;
+  border-top: 2px solid #4f4f4f;
+}
+.in-progress .more-to-come .cred-1 {
+  font-size: 3.95em;
+  line-height: .8em;
+  font-family: "Pathway Gothic One", "Helvetica Neue", Helvetica, sans-serif;
+  color: #363636;
+}
+@media (max-width: 480px) {
+  .in-progress .more-to-come .cred-1 {
+    font-size: 3.45em;
+  }
+}
+.in-progress .more-to-come .cred-2 {
+  font-size: 2em;
+  font-family: "Pathway Gothic One", "Helvetica Neue", Helvetica, sans-serif;
+  color: #4f4f4f;
+}
+@media (max-width: 480px) {
+  .in-progress .more-to-come .cred-2 {
+    font-size: 1.45em;
+  }
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -772,6 +802,10 @@ header .hgroup p a:hover {
 .ui-section {
   padding-top: 25px;
   padding-bottom: 25px;
+  /* UI HEADINGS */
+  /* UI TYPOGRAPHY */
+  /* UI ICONS */
+  /* UI BUTTONS */
 }
 .ui-section .ui-headings {
   text-align: center;
@@ -792,9 +826,10 @@ header .hgroup p a:hover {
   }
 }
 .ui-section .ui-headings h2 {
-  font-size: 4em;
+  font-size: 3.5em;
   position: relative;
-  padding: 5px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 .ui-section .ui-headings p {
   text-align: left;
@@ -822,8 +857,37 @@ header .hgroup p a:hover {
     width: 99.92187%;
   }
 }
+.ui-section .ui-headings ul {
+  list-style-type: none;
+  display: block;
+}
+.ui-section .ui-headings ul li {
+  font-weight: 400;
+  color: #6C6C6C;
+  font-family: "Pathway Gothic One", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin-left: 7%;
+  margin-bottom: 2%;
+  padding: 10px;
+  width: 240px;
+  display: inline-block;
+  text-align: left;
+  float: left;
+  clear: left;
+  background: #e1e8f4;
+  border: 1px solid #bbcce7;
+}
+.ui-section .ui-headings ul li span {
+  font-weight: 600;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+}
+.ui-section .ui-headings ul li:hover {
+  background: #96b0d9;
+  color: #ECECEC;
+}
 .ui-section .typography-styles {
   background: #e1e8f4;
+  padding-bottom: 25px;
 }
 .ui-section .typography-styles .typo-heading {
   font-size: 2em;
@@ -831,21 +895,26 @@ header .hgroup p a:hover {
   background: #7093cc;
   color: #ECECEC;
   padding: 15px;
+  border-bottom: none;
 }
 .ui-section .typography-styles h1, .ui-section .typography-styles h2, .ui-section .typography-styles h3, .ui-section .typography-styles h4, .ui-section .typography-styles h5, .ui-section .typography-styles h6, .ui-section .typography-styles p, .ui-section .typography-styles blockquote {
   margin: 0;
-  padding: 10px;
+  padding: 13px;
   font-size: inherit;
   line-height: 1.2em;
+  border-bottom: 2px dotted #cbd0d3;
 }
 .ui-section .typography-styles h1 span, .ui-section .typography-styles h2 span, .ui-section .typography-styles h3 span, .ui-section .typography-styles h4 span, .ui-section .typography-styles h5 span, .ui-section .typography-styles h6 span, .ui-section .typography-styles p span, .ui-section .typography-styles blockquote span {
   font-size: 14px;
+  color: #49515F;
+  line-height: 15px;
+  font-weight: 600;
 }
 .ui-section .typography-styles h1 {
-  font-size: 4em;
+  font-size: 3.95em;
 }
 .ui-section .typography-styles h2 {
-  font-size: 3.75em;
+  font-size: 3.65em;
 }
 .ui-section .typography-styles h3 {
   font-size: 3.35em;
@@ -854,10 +923,10 @@ header .hgroup p a:hover {
   font-size: 3em;
 }
 .ui-section .typography-styles h5 {
-  font-size: 2.5em;
+  font-size: 2.75em;
 }
 .ui-section .typography-styles h6 {
-  font-size: 2em;
+  font-size: 2.25em;
 }
 .ui-section .typography-styles p {
   font-size: 1.2em;
@@ -886,12 +955,201 @@ header .hgroup p a:hover {
   clear: both;
 }
 .ui-section .item-ui-icons .icon-stock {
-  border-bottom: 2px solid #d9dcde;
+  margin: 0;
   padding-bottom: 10px;
 }
 .ui-section .item-ui-icons .icon-stock img {
   display: inline-block;
   padding: 5px;
+}
+.ui-section .ui-buttons {
+  margin: 0;
+  padding-bottom: 25px;
+}
+.ui-section .ui-buttons .btns {
+  padding: 15px;
+  font-size: 1.3em;
+  font-family: "Pathway Gothic One", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+@media (max-width: 768px) {
+  .ui-section .ui-buttons .btns {
+    font-size: 1.15em;
+  }
+}
+@media (max-width: 480px) {
+  .ui-section .ui-buttons .btns {
+    font-size: 1em;
+  }
+}
+.ui-section .ui-buttons .btns .default {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .default ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .default ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  border: none;
+  padding: 15px;
+  background: #d9dcde;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .default ul li:hover {
+  background: #7093cc;
+  color: #ECECEC;
+  cursor: pointer;
+}
+.ui-section .ui-buttons .btns .rounded {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .rounded ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .rounded ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  background: #d9dcde;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .rounded ul li:hover {
+  background: #7093cc;
+  color: #ECECEC;
+  cursor: pointer;
+}
+.ui-section .ui-buttons .btns .underline {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .underline ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .underline ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #6C6C6C;
+  padding: 15px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .underline ul li:hover {
+  border-bottom-color: #7093cc;
+  color: #7093cc;
+  cursor: pointer;
+}
+.ui-section .ui-buttons .btns .overline {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .overline ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .overline ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  background: none;
+  border: none;
+  border-top: 2px solid #6C6C6C;
+  padding: 15px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .overline ul li:hover {
+  border-top-color: #7093cc;
+  color: #7093cc;
+  cursor: pointer;
+}
+.ui-section .ui-buttons .btns .modern {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .modern ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .modern ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  background: none;
+  border: 2px solid #6C6C6C;
+  padding: 15px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .modern ul li:hover {
+  border-color: #5e85c5;
+  background: #7093cc;
+  color: #ECECEC;
+  cursor: pointer;
+}
+.ui-section .ui-buttons .btns .w-caption {
+  margin: 0;
+  padding: 10px;
+}
+.ui-section .ui-buttons .btns .w-caption ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #7093cc;
+}
+.ui-section .ui-buttons .btns .w-caption ul li {
+  display: inline-block;
+  color: #6C6C6C;
+  border: none;
+  padding: 15px;
+  background: #d9dcde;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ui-section .ui-buttons .btns .w-caption ul li span {
+  position: relative;
+  display: block;
+  top: 2px;
+  left: 0;
+  font-size: 13px;
+}
+.ui-section .ui-buttons .btns .w-caption ul li:hover {
+  background: #7093cc;
+  color: #ECECEC;
+  cursor: pointer;
 }
 
 /* LARGE */

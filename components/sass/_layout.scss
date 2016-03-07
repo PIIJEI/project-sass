@@ -1,3 +1,29 @@
 .skiplinks {
 	display: none;
 }
+
+/* MORE TO COME SOON */
+.in-progress {
+	margin: 0;
+	.more-to-come {
+		text-align: center;
+		border-top: 2px solid lighten($dark, 20%);
+		.cred-1 {
+			font-size: 3.95em;
+			@include breakpoint(sml) {
+				font-size: 3.45em;
+			}
+			line-height: .8em;
+			font-family: $titleFont;
+			color: lighten($dark, 10%);
+		}//h1
+		.cred-2 {
+			font-size: 2em;
+			@include breakpoint(sml) {
+				font-size: 1.45em;
+			}
+			font-family: $titleFont;
+			color: lighten($dark, 20%);
+		}//h2
+	}//more-to-come
+}//in-progress
