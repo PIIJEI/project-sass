@@ -17,7 +17,7 @@
 			padding-top: 25px;
 		}//h2
 		p {
-			text-align: left;
+			text-align: center;
 			@include gs-span(lr, 2, 5);
 			@include breakpoint(med) {
 				@include gs-span(md, 1, 6);
@@ -34,7 +34,6 @@
 				color: $lightDark;
 				font-family: $titleFont;
 				font-size: 1.3em;
-				margin-left: 7%;
 				margin-bottom: 2%;
 				padding: 10px;
 				width: 240px;
@@ -60,6 +59,7 @@
 	.typography-styles {
 		background: lighten($steelBlue, 40%);
 		padding-bottom: 25px;
+		text-align: center;
 		.typo-heading {
 			font-size: 2em;
 			line-height: 1em;
@@ -123,11 +123,20 @@
 		.icon-stock {
 			margin: 0;
 			padding-bottom: 10px;
-			img {
+			padding-top: 10px;
+			border-top: 2px solid $lightDark;
+			border-bottom: 2px solid $lightDark;
+			span {
 				display: inline-block;
-				padding: 5px;
-			}//icon-stock
-		} //ui-headings
+				padding: 10px;
+				margin-left: 2%;
+			}//icon-stock.span
+			img {
+				width: 74px;
+				display: block;
+				margin: 0 auto;
+			}//icon-stock img
+		} //icon-stock
 	} //item-ui-icons
 
 /* UI BUTTONS */

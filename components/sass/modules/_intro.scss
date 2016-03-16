@@ -22,6 +22,12 @@ main {
 			} //page-title
 
 			.introSection {
+				p {
+					text-align: center;
+					font-size: 1.2em;
+					letter-spacing: 0.05em;
+					line-height: 1.2em;
+				}
 				@include gs-span(lr, 3, 4);
 				clear: left;
 				@include breakpoint(med_lrg) {
@@ -35,9 +41,13 @@ main {
 			.c_2col {
 				@include gs-span(lr, 1, 6);
 				clear: left;
-				margin-bottom: 15px;
+				margin-bottom: 30px;
 				margin-top: 15px;
-				border-bottom: 3px solid lighten($dark, 40%);
+				@include breakpoint(sml) {
+					padding-bottom: 25px;
+					border-bottom: 3px solid lighten($dark, 40%);
+				}//breakpoint(small)
+				
 				.contentIndex {
 					@include gs-span(lr, 2, 2);
 					@include breakpoint(med_lrg) {
@@ -119,7 +129,7 @@ main {
 						@include gs-span(md, 2, 5);
 						clear: left;
 					}
-					h2, p {
+					h2, h3, p {
 						padding: 5px 35px;
 					} //contentFill.h2,p
 					h2 {
@@ -129,11 +139,27 @@ main {
 						font: 100%;
 						font-weight: $bold;
 					} //contentFill.h2
+					h3 {
+						font-size: 2.95em;
+						line-height: 1.2em;
+						margin-bottom: 7%;
+						font: 100%;
+						font-weight: $bold;
+					}
 					p {
 						font-size: 1.2em;
 						letter-spacing: 0.02em;
 						line-height: 1.2em;
 					} //contentFill.p
+					code {
+						background: $dark;
+						padding: 10px;
+						border: 2px solid lighten($dark, 10%);
+						border-radius: 8px;
+						color: $whiteSmoke;
+						margin-top: 3%;
+						margin-bottom: 3%;
+					}//code
 				} //contentFill
 			}	//c_2col
 				
@@ -162,10 +188,10 @@ main {
 								&:hover {
 									background: lighten($silver, 10%);
 									color: darken($silver, 50%);
-								}
+								}//&:hover
 								&.curr {
 									background: lighten($silver, 10%);
-								}
+								}//&.curr
 							} //a
 						} //li
 					} //sidemenu
@@ -199,6 +225,6 @@ main {
 		p {
 			letter-spacing: 0.05em;
 			line-height: 1.2em;
-		}
+		}//p
 	} //container
 } //main

@@ -5,9 +5,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Piotr Osiak - SASS Framework Project</title>
-	<meta name="keywords" content="#">
-	<meta name="description" content="#">
+	<title>Documentation - SASS Grid System Project</title>
+	<meta name="keywords" content="sass, self-initiatied, project, mmu, manmet, manchester metropolitan university, manchester, metropolitan, university, piotr, osiak, css, html">
+	<meta name="description" content="A self-initiated project based on SASS Pre-Compressor. Creating a 6 Column Grid System with GRIDSETAPP.com and implementing it with own CSS styling and structure.">
 	<meta name="author" content="Piotr Osiak">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
@@ -22,14 +22,14 @@
 	<ul>
 		<li><a href="index.html">Intro</a>
 		</li>
-		<li><a href="framework.html">Framework</a></li>
+		<li><a href="framework.html">Features</a></li>
 		<li><a href="#container" id="current">Documentation</a></li>
 	</ul>
 </nav>
 <header role="banner"> <!-- Banner of the page -->
 	<div class="hgroup">
 		<h1>beta.</h1>
-		<h2>SASS Framework </h2>
+		<h2>SASS Grid System </h2>
 		<p>Documentation</p>
 	</div>
 </header>
@@ -55,12 +55,22 @@
 
 		<div id="layout" class="contentFill">
 			<h2>Grid Layout</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Would you like to know how to implement it in your site or why would you want to do that?<br>This is how to set it up.</p>
+
+			<p>First you have to include gridset.scss file in your sass components<br>
+			Gridset.scss file has basic instructions of how to use it. You can build the grid by using classes with your own class names and implement it with the css cheat sheet that can assist you with the dimensions for each column.</p>
+
+			<p>You can also use an easier way to include the mixin that is prepared with the file archive. Those mixin include things like "gs-span", "gs-pad", "gs-float" and "gs-media". Those mixins will only work correctly if you include it with the source file gridset.scss.</p>
+
+			<p>How does the i.e gs-span work with the code?</p>
+
+			<p>Example:<br>
+			<strong>HTML</strong><br>
+			&lt;div class="className"&gt; /* Content */ &lt;/div&gt;<br>
+			<strong>CSS</strong><br>
+			.className {<br>
+				@include gs-span(lr, 1, 4)<br>
+			}</p>
 		</div>
 	</section>
 
@@ -147,12 +157,7 @@
 
 		<div id="download" class="contentFill">
 			<h2>Download</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h3>Available Soon</h3>
 		</div>
 	</section>
 

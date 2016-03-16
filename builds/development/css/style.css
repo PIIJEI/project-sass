@@ -552,6 +552,12 @@ main #container .grid .introSection {
   width: 41.61523%;
   clear: left;
 }
+main #container .grid .introSection p {
+  text-align: center;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+}
 @media (max-width: 991px) {
   main #container .grid .introSection {
     display: block;
@@ -577,9 +583,14 @@ main #container .grid .c_2col {
   margin-right: -100%;
   width: 100%;
   clear: left;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-top: 15px;
-  border-bottom: 3px solid #828282;
+}
+@media (max-width: 480px) {
+  main #container .grid .c_2col {
+    padding-bottom: 25px;
+    border-bottom: 3px solid #828282;
+  }
 }
 main #container .grid .c_2col .contentIndex {
   display: block;
@@ -705,7 +716,7 @@ main #container .grid .c_2col .contentFill {
     clear: left;
   }
 }
-main #container .grid .c_2col .contentFill h2, main #container .grid .c_2col .contentFill p {
+main #container .grid .c_2col .contentFill h2, main #container .grid .c_2col .contentFill h3, main #container .grid .c_2col .contentFill p {
   padding: 5px 35px;
 }
 main #container .grid .c_2col .contentFill h2 {
@@ -715,10 +726,26 @@ main #container .grid .c_2col .contentFill h2 {
   font: 100%;
   font-weight: 600;
 }
+main #container .grid .c_2col .contentFill h3 {
+  font-size: 2.95em;
+  line-height: 1.2em;
+  margin-bottom: 7%;
+  font: 100%;
+  font-weight: 600;
+}
 main #container .grid .c_2col .contentFill p {
   font-size: 1.2em;
   letter-spacing: 0.02em;
   line-height: 1.2em;
+}
+main #container .grid .c_2col .contentFill code {
+  background: #1C1C1C;
+  padding: 10px;
+  border: 2px solid #363636;
+  border-radius: 8px;
+  color: #ECECEC;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 main #container .grid .sidebar {
   margin: 0;
@@ -926,24 +953,41 @@ header .hgroup p a:hover {
   font-size: 20px;
   text-transform: uppercase;
 }
-.grid-info .grid-pics img {
+.grid-info .grid-pics {
+  margin: 0;
+  padding: 0;
+}
+.grid-info .grid-pics span {
+  margin-top: 3%;
   display: inline-block;
-  padding: 5px;
+}
+.grid-info .grid-pics span p {
+  text-align: center;
+}
+.grid-info .grid-pics span img {
+  display: block;
+  padding: 0;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 @media (max-width: 991px) {
-  .grid-info .grid-pics img {
-    max-width: 125px;
+  .grid-info .grid-pics span img {
+    display: block;
+    margin: 0 auto;
+    width: 485px;
   }
 }
 @media (max-width: 768px) {
-  .grid-info .grid-pics img {
-    max-width: 110px;
-    padding: 1px;
+  .grid-info .grid-pics span img {
+    display: block;
+    margin: 0 auto;
+    width: 440px;
   }
 }
 @media (max-width: 480px) {
-  .grid-info .grid-pics img {
-    max-width: 100px;
+  .grid-info .grid-pics span img {
+    width: 320px;
   }
 }
 
@@ -980,7 +1024,7 @@ header .hgroup p a:hover {
   padding-top: 25px;
 }
 .ui-section .ui-headings p {
-  text-align: left;
+  text-align: center;
   display: block;
   float: left;
   margin-left: 6.95703%;
@@ -1014,7 +1058,6 @@ header .hgroup p a:hover {
   color: #6C6C6C;
   font-family: "Pathway Gothic One", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.3em;
-  margin-left: 7%;
   margin-bottom: 2%;
   padding: 10px;
   width: 240px;
@@ -1036,6 +1079,7 @@ header .hgroup p a:hover {
 .ui-section .typography-styles {
   background: #e1e8f4;
   padding-bottom: 25px;
+  text-align: center;
 }
 .ui-section .typography-styles .typo-heading {
   font-size: 2em;
@@ -1105,10 +1149,19 @@ header .hgroup p a:hover {
 .ui-section .item-ui-icons .icon-stock {
   margin: 0;
   padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #6C6C6C;
+  border-bottom: 2px solid #6C6C6C;
+}
+.ui-section .item-ui-icons .icon-stock span {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 2%;
 }
 .ui-section .item-ui-icons .icon-stock img {
-  display: inline-block;
-  padding: 5px;
+  width: 74px;
+  display: block;
+  margin: 0 auto;
 }
 .ui-section .ui-buttons {
   margin: 0;

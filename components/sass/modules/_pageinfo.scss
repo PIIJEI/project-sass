@@ -27,19 +27,32 @@
 		} //p	
 	} //grid-6-title
 	.grid-pics {
-		img {
+		margin: 0;
+		padding: 0;
+		span {
+			margin-top: 3%;
 			display: inline-block;
-			padding: 5px;
-			@include breakpoint(med_lrg) {
-				max-width: 125px;
-			}
-			@include breakpoint(med) {
-				max-width: 110px;
-				padding: 1px;
-			}
-			@include breakpoint(sml) {
-				max-width: 100px;
-			}
-		}
-	}
-}
+			p { text-align: center; }
+			img {
+				display: block;
+				padding: 0;
+				width: 500px;
+				max-width: 100%;
+				margin: 0 auto;
+				@include breakpoint(med_lrg) {
+					display: block;
+					margin: 0 auto;
+					width: 485px;
+				}//breakpoint(medium-large)
+				@include breakpoint(med) {
+					display: block;
+					margin: 0 auto;
+					width: 440px;
+				}//breakpoint(medium)
+				@include breakpoint(sml) {
+					width: 320px;
+				}//breakpoint(small)
+			}//img
+		}//span
+	}//grid-pics
+}//grid-info
