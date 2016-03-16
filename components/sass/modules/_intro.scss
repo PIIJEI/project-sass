@@ -18,31 +18,127 @@ main {
 					@include gs-span(lr, 2, 6);
 					text-transform: uppercase;
 					clear: left;
-				}
+				} //page-title.span
 			} //page-title
-			
-			@include gs-media(lr, min) {
-				.lr-2-3 {
-					width: 39.5547%;
-					margin-left: 6.957%;
-					float: left;
-					margin-right: -100%;
-					padding-left: 1%;
-					padding-right: 1%;
-					@include gs-pad(lr, padinfull);
-					clear: left;
-				} //lr2-lr3
-				.lr-4-5 {
-					width: 43.6758%;
-					margin-left: 47.5117%;
-					float: left;
-					margin-right: -100%;
-					padding-left: 1%;
-					padding-right: 1%;
-					@include gs-pad(lr, padinfull);
-					clear: right;
-				} //lr4-lr5
 
+			.introSection {
+				@include gs-span(lr, 3, 4);
+				clear: left;
+				@include breakpoint(med_lrg) {
+					@include gs-span(md, 2, 5);
+				} //breapoint(medium_large)
+				@include breakpoint(med) {
+					@include gs-span(md, 2, 5);
+				} //breakpoint(medium)
+			} //introSection
+
+			.c_2col {
+				@include gs-span(lr, 1, 6);
+				clear: left;
+				margin-bottom: 15px;
+				margin-top: 15px;
+				border-bottom: 3px solid lighten($dark, 40%);
+				.contentIndex {
+					@include gs-span(lr, 2, 2);
+					@include breakpoint(med_lrg) {
+						@include gs-span(md, 2, 5);
+					}
+					@include breakpoint(med) {
+						@include gs-span(md, 2, 5);
+					}
+					.docH2 {
+						font-size: 3.3em;
+						margin-bottom: 5px;
+						line-height: 1.2em;
+						@include breakpoint(med_lrg) {
+							// border-top: 2px solid lighten($dark, 40%);
+							margin-top: 25px;
+							padding-top: 10px;
+						}
+						@include breakpoint(med) {
+							// border-top: 2px solid lighten($dark, 40%);
+							margin-top: 25px;
+							padding-top: 10px;
+						}
+					}//docH2
+
+					.indexMenu {
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						margin-bottom: 10%;
+						li {
+							margin: 0;
+							padding: 0;
+							a {
+								display: block;
+								text-decoration: none;
+								text-transform: uppercase;
+								font-weight: $bold;
+								color: lighten($dark, 15%);
+								padding: 20px;
+								border-bottom: 1px dotted lighten($dark, 40%);
+								&:hover {
+									background: lighten($dark, 15%);
+									cursor: pointer;
+									color: $whiteSmoke;
+								}//indexMenu.a:hover
+							} //indexMenu.a
+							@include breakpoint(sml) {
+								text-align: center;
+							}//breakpoint(small)
+							.activeIndex {
+								background: lighten($steelBlue, 5%);
+								color: $whiteSmoke;
+								@include breakpoint(wide) {
+									text-align: right;
+								}//breakpoint(wide)
+								@include breakpoint(lrg) {
+									text-align: right;
+								}//breakpoint(large)
+								@include breakpoint(med_lrg) {
+									text-align: center;
+								}//breakpoint(large)
+								@include breakpoint(med) {
+									text-align: center;
+								}//breakpoint(med)
+							}//activeIndex
+						} //indexMenu.li
+					} //indexMenu		 
+				} //contentIndex
+
+				.contentFill {
+					@include gs-span(lr, 3, 4);
+					border-left: 1px dashed lighten($dark, 50%);
+					padding: 0;
+					@include breakpoint(med_lrg) {
+						@include gs-span(md, 2, 5);
+						clear: left;
+					}
+					@include breakpoint(med) {
+						@include gs-span(md, 2, 5);
+						clear: left;
+					}
+					h2, p {
+						padding: 5px 35px;
+					} //contentFill.h2,p
+					h2 {
+						font-size: 3.2em;
+						line-height: 1.2em;
+						margin-bottom: 7%;
+						font: 100%;
+						font-weight: $bold;
+					} //contentFill.h2
+					p {
+						font-size: 1.2em;
+						letter-spacing: 0.02em;
+						line-height: 1.2em;
+					} //contentFill.p
+				} //contentFill
+			}	//c_2col
+				
+				
+			@include gs-media(lr, min) {
 				.sidebar {
 					margin: 0;
 					padding: 0;
@@ -73,7 +169,8 @@ main {
 							} //a
 						} //li
 					} //sidemenu
-				} //sidenav
+				} //sidebar
+
 			} //gs-media large
 			@include breakpoint(sml) {
 				.sml {
@@ -82,8 +179,8 @@ main {
 					@include gs-pad(s, padinfull);
 					margin: 0;
 					width: 100%;
-		  			float: left;
-		  			clear: left;
+		  		float: left;
+		  		clear: left;
 				} //sml
 			} //.s-all
 		} //grid

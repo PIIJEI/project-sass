@@ -7,7 +7,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	minifyHTML = require('gulp-minify-html'),
 	concat = require('gulp-concat');
-	
 
 var env, 
 	jsSources,
@@ -15,16 +14,6 @@ var env,
 	htmlSources,
 	outputDir,
 	sassStyle;
-
-// env = process.env.NODE_ENV || 'development';
-
-// if (env==='development') {
-// 	outputDir = 'builds/development/';
-// 	sassStyle = 'expanded';
-// } else {
-// 	outputDir = 'builds/production/';
-// 	sassStyle = "compressed";
-// }
 
 env = 'development';
 
@@ -58,13 +47,11 @@ gulp.task('compass', function() {
 		style: sassStyle
 	}))
 	.on('error', gutil.log)
-	//.pipe(gulp.dest(outputDir + 'css'))
 	.pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
 	gulp.watch(jsSources, ['js']);
-	// gulp.watch('*.scss', ['compass']);
 	gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
 	gulp.watch('builds/development/*.html', ['html']);
 });

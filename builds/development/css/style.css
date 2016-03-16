@@ -544,33 +544,181 @@ main #container .grid .page-title span {
   text-transform: uppercase;
   clear: left;
 }
-main #container .grid .lr-2-3 {
-  width: 39.5547%;
-  margin-left: 6.957%;
+main #container .grid .introSection {
+  display: block;
   float: left;
+  margin-left: 28.85547%;
   margin-right: -100%;
-  padding-left: 1%;
-  padding-right: 1%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 1%;
-  padding-right: 1%;
+  width: 41.61523%;
   clear: left;
 }
-main #container .grid .lr-4-5 {
-  width: 43.6758%;
-  margin-left: 47.5117%;
+@media (max-width: 991px) {
+  main #container .grid .introSection {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+  }
+}
+@media (max-width: 768px) {
+  main #container .grid .introSection {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+  }
+}
+main #container .grid .c_2col {
+  display: block;
   float: left;
+  margin-left: 0;
   margin-right: -100%;
-  padding-left: 1%;
-  padding-right: 1%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 1%;
-  padding-right: 1%;
-  clear: right;
+  width: 100%;
+  clear: left;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-bottom: 3px solid #828282;
+}
+main #container .grid .c_2col .contentIndex {
+  display: block;
+  float: left;
+  margin-left: 6.95703%;
+  margin-right: -100%;
+  width: 20.89844%;
+}
+@media (max-width: 991px) {
+  main #container .grid .c_2col .contentIndex {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+  }
+}
+@media (max-width: 768px) {
+  main #container .grid .c_2col .contentIndex {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+  }
+}
+main #container .grid .c_2col .contentIndex .docH2 {
+  font-size: 3.3em;
+  margin-bottom: 5px;
+  line-height: 1.2em;
+}
+@media (max-width: 991px) {
+  main #container .grid .c_2col .contentIndex .docH2 {
+    margin-top: 25px;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  main #container .grid .c_2col .contentIndex .docH2 {
+    margin-top: 25px;
+    padding-top: 10px;
+  }
+}
+main #container .grid .c_2col .contentIndex .indexMenu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 10%;
+}
+main #container .grid .c_2col .contentIndex .indexMenu li {
+  margin: 0;
+  padding: 0;
+}
+main #container .grid .c_2col .contentIndex .indexMenu li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #424242;
+  padding: 20px;
+  border-bottom: 1px dotted #828282;
+}
+main #container .grid .c_2col .contentIndex .indexMenu li a:hover {
+  background: #424242;
+  cursor: pointer;
+  color: #ECECEC;
+}
+@media (max-width: 480px) {
+  main #container .grid .c_2col .contentIndex .indexMenu li {
+    text-align: center;
+  }
+}
+main #container .grid .c_2col .contentIndex .indexMenu li .activeIndex {
+  background: #5e85c5;
+  color: #ECECEC;
+}
+@media (min-width: 1200px) {
+  main #container .grid .c_2col .contentIndex .indexMenu li .activeIndex {
+    text-align: right;
+  }
+}
+@media (min-width: 992px) {
+  main #container .grid .c_2col .contentIndex .indexMenu li .activeIndex {
+    text-align: right;
+  }
+}
+@media (max-width: 991px) {
+  main #container .grid .c_2col .contentIndex .indexMenu li .activeIndex {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  main #container .grid .c_2col .contentIndex .indexMenu li .activeIndex {
+    text-align: center;
+  }
+}
+main #container .grid .c_2col .contentFill {
+  display: block;
+  float: left;
+  margin-left: 28.85547%;
+  margin-right: -100%;
+  width: 41.61523%;
+  border-left: 1px dashed #9c9c9c;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  main #container .grid .c_2col .contentFill {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+    clear: left;
+  }
+}
+@media (max-width: 768px) {
+  main #container .grid .c_2col .contentFill {
+    display: block;
+    float: left;
+    margin-left: 8.55208%;
+    margin-right: -100%;
+    width: 80.08333%;
+    clear: left;
+  }
+}
+main #container .grid .c_2col .contentFill h2, main #container .grid .c_2col .contentFill p {
+  padding: 5px 35px;
+}
+main #container .grid .c_2col .contentFill h2 {
+  font-size: 3.2em;
+  line-height: 1.2em;
+  margin-bottom: 7%;
+  font: 100%;
+  font-weight: 600;
+}
+main #container .grid .c_2col .contentFill p {
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
 }
 main #container .grid .sidebar {
   margin: 0;
@@ -1167,6 +1315,21 @@ header .hgroup p a:hover {
   clear: left;
 }
 
+.lr-2-3 {
+  width: 39.5547%;
+  margin-left: 6.957%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
 .lr-2-5 {
   width: 84.2305%;
   margin-left: 6.957%;
@@ -1196,6 +1359,21 @@ header .hgroup p a:hover {
   clear: right;
 }
 
+.lr-3-4 {
+  width: 41.6152%;
+  margin-left: 28.8555%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+  clear: left;
+}
+
 .lr-3-5 {
   width: 62.332%;
   margin-left: 28.8555%;
@@ -1223,7 +1401,6 @@ header .hgroup p a:hover {
   box-sizing: border-box;
   padding-left: 1%;
   padding-right: 1%;
-  clear: left;
 }
 
 /* MEDIUM */

@@ -10,6 +10,17 @@
     clear: left;  
 }
 
+.lr-2-3 {
+    width: 39.5547%;
+    margin-left: 6.957%;
+    float: left;
+    margin-right: -100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    @include gs-pad(lr, padinfull);
+    clear: left;
+}
+
 .lr-2-5 {
 	width: 84.2305%;
   	margin-left: 6.957%;
@@ -31,6 +42,17 @@
   	clear: right;
 }
 
+.lr-3-4 {
+  width: 41.6152%;
+  margin-left: 28.8555%;
+  float: left;
+  margin-right: -100%;
+  padding-left: 1%;
+  padding-right: 1%;
+  @include gs-pad(lr, padinfull);
+  clear: left;
+}
+
 .lr-3-5 {
 	width: 62.332%;
   	margin-left: 28.8555%;
@@ -50,7 +72,7 @@
   	padding-left: 1%;
   	padding-right: 1%;
   	@include gs-pad(lr, padinfull);
-  	clear: left;
+  	//clear: left;
 }
 
 /* MEDIUM */
